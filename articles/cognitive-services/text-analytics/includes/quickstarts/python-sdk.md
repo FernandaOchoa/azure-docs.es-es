@@ -498,7 +498,7 @@ def entity_recognition_example(client):
         print("Named Entities:\n")
         for entity in result.entities:
             print("\tText: \t", entity.text, "\tCategory: \t", entity.category, "\tSubCategory: \t", entity.subcategory,
-                    "\n\tConfidence Score: \t", round(entity.confidence_score, 2), "\tLength: \t", entity.length, "\tOffset: \t", entity.offset, "\n")
+                    "\n\tConfidence Score: \t", round(entity.confidence_score, 2), "\tOffset: \t", entity.offset, "\n")
 
     except Exception as err:
         print("Encountered exception. {}".format(err))
@@ -544,7 +544,6 @@ def entity_linking_example(client):
                 print("\t\tText:", match.text)
                 print("\t\tConfidence Score: {0:.2f}".format(match.confidence_score))
                 print("\t\tOffset: {}".format(match.offset))
-                print("\t\tLength: {}".format(match.length))
             
     except Exception as err:
         print("Encountered exception. {}".format(err))
@@ -627,7 +626,6 @@ def pii_recognition_example(client):
             print("\tCategory: {}".format(entity.category))
             print("\tConfidence Score: {}".format(entity.confidence_score))
             print("\tOffset: {}".format(entity.offset))
-            print("\tLength: {}".format(entity.length))
 pii_recognition_example(client)
 ```
 
